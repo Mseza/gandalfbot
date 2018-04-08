@@ -1,6 +1,6 @@
 {
   "name": "gandalfbot",
-  "description": "Bot for manage news",
+  "description": "Bot for manage new members",
   "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
