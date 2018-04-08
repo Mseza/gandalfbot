@@ -28,7 +28,7 @@ client.on('message', message => {
 
   if(message.member.roles.has('369152444955099138')) {
     
-    if(message.content = '!clear'){
+    if(message.content === '!clear'){
     
       message.channel.bulkDelete(99);
       message.channel.send('VOUS NE PASSEREZ PAS!');
