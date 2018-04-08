@@ -1,2 +1,2 @@
-# rolemanagerbot
-The role manager for the Tuto Unity Fr discord server
+# gandalfbot
+A bot for the Tuto Unity Fr discord server
