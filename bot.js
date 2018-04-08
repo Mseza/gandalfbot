@@ -29,13 +29,15 @@ client.on('message', message => {
 
     if(message.content === "J'ai lu et j'adhère aux règles de ce serveur."){
 
-      message.delete();
+      message.channel.bulkDelete(50);
       message.member.addRole(roleRules);
       message.member.removeRole(newRole);
+      message.channel.send('VOUS NE PASSEREZ PAS!');
+      console.log(message.author.username + " est entré sur le serveur !");
 
     } else {
 
-      message.reply('VOUS NE PASSEREZ PAS!');
+      message.channel.send('VOUS NE PASSEREZ PAS!');
 
     }
 
