@@ -27,7 +27,7 @@ client.on('message', message => {
 
   if(message.channel.id === '432300235470012438'){
 
-    if(message.content === "J'ai lu et accepté les règles !"){
+    if(message.content === "J'ai lu et j'adhère aux règles de ce serveur."){
 
       message.member.addRole(roleRules);
       message.member.removeRole(newRole);
