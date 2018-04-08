@@ -26,8 +26,19 @@ client.on('message', message => {
 
   if(message.author.bot) return;
 
-  if(message.member.roles.has('369152444955099138')) return;
+  if(message.member.roles.has('369152444955099138')) {
+    
+    if(message.content = '!clear'){
+    
+      message.channel.bulkDelete(99);
+      message.channel.send('VOUS NE PASSEREZ PAS!');
+      
+    } else {
+  
+    return;
 
+  }
+    
   if(message.channel.id === '432300235470012438'){
 
     if(message.content === "J'ai lu et j'adhère aux règles de ce serveur."){
