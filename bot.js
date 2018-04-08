@@ -29,6 +29,7 @@ client.on('message', message => {
 
     if(message.content === "J'ai lu et j'adhère aux règles de ce serveur."){
 
+      message.delete();
       message.member.addRole(roleRules);
       message.member.removeRole(newRole);
 
