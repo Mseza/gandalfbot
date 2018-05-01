@@ -25,6 +25,7 @@ client.on("message", message => {
   if(message.content === "AddRoles"){
    
     membersRole = guildBot.members;
+    console.log(membersRole);
     var i;
     for(i = 0; i < membersRole.length; i++){
      
