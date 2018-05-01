@@ -40,7 +40,7 @@ client.on('message', message => {
     if(message.content === "J'ai lu et j'adhère aux règles de ce serveur."){
 
       message.channel.bulkDelete(99);
-      member.addRole(newRole);
+      message.member.addRole(newRole);
       message.channel.send('VOUS NE PASSEREZ PAS!');
       console.log(message.author.username + " est entré sur le serveur !");
 
