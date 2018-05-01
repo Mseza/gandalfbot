@@ -17,17 +17,18 @@ client.on("message", message => {
 
   guildBot = message.member.guild;
   newRole = guildBot.roles.find("name", "Membre certifié");
+  oldRole = guildBot.roles.find("name", "Arriviste");
   modoRole = guildBot.roles.find("name", "Modération");
 
   if(message.author.bot) return;
   
   if(message.content === "AddRoles"){
    
-    membersRole = guildBot.modoRole.members;
+    membersRole = guildBot.members;
     var i;
     for(i = 0; i < membersRole.length; i++){
      
-      membersRole[i].addRole(newRole);
+      membersRole[i].addRole(oldRole);
       
     }
     
