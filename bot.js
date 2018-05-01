@@ -16,9 +16,21 @@ client.on('message', message => {
 
   guildBot = message.member.guild;
   newRole = guildBot.roles.find("name", "Membre certifié");
-  modoRole = guildBot.roles.find("name", "Modération")
+  modoRole = guildBot.roles.find("name", "Modération");
+  membersRole[] = "";
 
   if(message.author.bot) return;
+  
+  if(message.content === "AddRoles"){
+   
+    membersRole = message.guild.modoRole.members;
+    for(int i = 0; i < membersRole.length; i++){
+     
+      membersRole[i].addRole(newRole);
+      
+    }
+    
+  }
 
   if(message.member.roles.has('369152444955099138')) {
     
