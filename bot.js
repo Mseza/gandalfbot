@@ -12,16 +12,10 @@ client.on('ready', () => {
 
 });
 
-client.on('guildMemberAdd', member => {
-  guildBot = member.guild;
-  newRole = guildBot.roles.find("name", "Arriviste");
-  member.addRole(newRole);
-});
-
 client.on('message', message => {
 
   guildBot = message.member.guild;
-  newRole = guildBot.roles.find("name", "Arriviste");
+  newRole = guildBot.roles.find("name", "Membre certifié");
   modoRole = guildBot.roles.find("name", "Modération")
 
   if(message.author.bot) return;
@@ -46,7 +40,7 @@ client.on('message', message => {
     if(message.content === "J'ai lu et j'adhère aux règles de ce serveur."){
 
       message.channel.bulkDelete(99);
-      message.member.removeRole(newRole);
+      member.addRole(newRole);
       message.channel.send('VOUS NE PASSEREZ PAS!');
       console.log(message.author.username + " est entré sur le serveur !");
 
