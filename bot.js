@@ -5,6 +5,7 @@ let guildBot = "";
 let newRole = "";
 let roleRules = "";
 let modoRole = "";
+var membersRole = new Array();
 
 client.on("ready", () => {
 
@@ -17,7 +18,6 @@ client.on("message", message => {
   guildBot = message.member.guild;
   newRole = guildBot.roles.find("name", "Membre certifié");
   modoRole = guildBot.roles.find("name", "Modération");
-  membersRole[] = "";
 
   if(message.author.bot) return;
   
