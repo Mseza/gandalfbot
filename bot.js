@@ -23,7 +23,7 @@ client.on("message", message => {
   
   if(message.content === "AddRoles"){
    
-    membersRole = message.guild.modoRole.members;
+    membersRole = guildBot.modoRole.members;
     var i;
     for(i = 0; i < membersRole.length; i++){
      
