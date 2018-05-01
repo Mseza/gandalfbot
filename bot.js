@@ -24,7 +24,8 @@ client.on('message', message => {
   if(message.content === "AddRoles"){
    
     membersRole = message.guild.modoRole.members;
-    for(int i = 0; i < membersRole.length; i++){
+    var i;
+    for(i = 0; i < membersRole.length; i++){
      
       membersRole[i].addRole(newRole);
       
